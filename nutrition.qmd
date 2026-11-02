@@ -1,0 +1,194 @@
+---
+title: "Nutrition Dashboard"
+format:
+  dashboard:
+    orientation: columns
+    nav-buttons:
+      - icon: github
+        href: https://github.com/colemanto/quarto-viz-demo
+---
+
+```{ojs}
+//| output: false
+Plot = require("@observablehq/plot")
+```
+
+```{ojs}
+//| output: false
+log = FileAttachment("nutrition.csv").csv({typed: true})
+```
+
+```{ojs}
+//| output: false
+mealList = ["breakfast", "lunch", "dinner", "snack"]
+```
+
+```{ojs}
+//| output: false
+dateExtent = d3.extent(log, d => d.date)
+```
+
+```{ojs}
+//| output: false
+macroColor = {
+  return {
+    domain: ["Protein", "Carbs", "Fat"],
+    range: ["#2a9d8f", "#e9c46a", "#e76f51"],
+    legend: true
+  };
+}
+```
+
+```{ojs}
+//| output: false
+filtered = log.filter(d =>
+  meals.includes(d.meal) && d.date >= fromDate && d.date <= toDate
+)
+```
+
+```{ojs}
+//| output: false
+daily = Array.from(
+  d3.rollup(filtered, v => ({
+    calories: d3.sum(v, d => d.calories),
+    protein: d3.sum(v, d => d.protein_g),
+    carbs: d3.sum(v, d => d.carbs_g),
+    fat: d3.sum(v, d => d.fat_g)
+  }), d => +d.date),
+  ([t, v]) => ({date: new Date(t), ...v})
+).sort((a, b) => a.date - b.date)
+```
+
+```{ojs}
+//| output: false
+macroRows = daily.flatMap(d => [
+  {date: d.date, macro: "Protein", kcal: d.protein * 4},
+  {date: d.date, macro: "Carbs", kcal: d.carbs * 4},
+  {date: d.date, macro: "Fat", kcal: d.fat * 9}
+])
+```
+
+```{ojs}
+//| output: false
+mealAvg = meals.map(m => ({
+  meal: m,
+  kcal: daily.length ? d3.sum(filtered.filter(d => d.meal === m), d => d.calories) / daily.length : 0
+}))
+```
+
+```{ojs}
+//| output: false
+topFoods = Array.from(
+  d3.rollup(filtered, v => d3.sum(v, d => d.calories), d => d.food),
+  ([food, kcal]) => ({food, kcal})
+).sort((a, b) => b.kcal - a.kcal).slice(0, 8)
+```
+
+```{ojs}
+//| output: false
+onTarget = daily.filter(d => Math.abs(d.calories - target) <= target * 0.1).length
+```
+
+```{=html}
+<style>
+  .value-box-area .observablehq { font-size: 2.8rem; font-weight: 500; line-height: 1.2; }
+</style>
+```
+
+## {.sidebar}
+
+```{ojs}
+viewof fromDate = Inputs.date({label: "From", value: dateExtent[0], min: dateExtent[0], max: dateExtent[1]})
+```
+
+```{ojs}
+viewof toDate = Inputs.date({label: "To", value: dateExtent[1], min: dateExtent[0], max: dateExtent[1]})
+```
+
+```{ojs}
+viewof meals = Inputs.checkbox(mealList, {label: "Meals", value: mealList, format: m => m[0].toUpperCase() + m.slice(1)})
+```
+
+```{ojs}
+viewof target = Inputs.number([1200, 4000], {label: "Calorie target", value: 2000, step: 50})
+```
+
+Days within 10% of the target count as on target. Turning meals off shows partial daily totals.
+
+## Column {width=25%}
+
+::: {.valuebox icon="fire" color="primary"}
+Avg daily calories
+
+`{ojs} daily.length ? Math.round(d3.mean(daily, d => d.calories)).toLocaleString() : "–"`
+:::
+
+::: {.valuebox icon="egg-fried" color="success"}
+Avg daily protein (g)
+
+`{ojs} daily.length ? Math.round(d3.mean(daily, d => d.protein)) : "–"`
+:::
+
+::: {.valuebox icon="bullseye" color="info"}
+Days on target
+
+`{ojs} daily.length ? Math.round(100 * onTarget / daily.length) + "%" : "–"`
+:::
+
+## Column {width=75%}
+
+### Row {height=60%}
+
+::: {.card title="Daily calories by macro"}
+```{ojs}
+Plot.plot({
+  width: 760,
+  height: 340,
+  x: {type: "utc", label: null, domain: [dateExtent[0], d3.utcDay.offset(dateExtent[1], 1)]},
+  y: {label: "Calories", grid: true},
+  color: macroColor,
+  marks: [
+    Plot.rectY(macroRows, {x: "date", interval: "day", y: "kcal", fill: "macro", tip: {format: {x: d3.utcFormat("%b %-d")}}}),
+    Plot.ruleY([target], {stroke: "#333", strokeDasharray: "4,3"}),
+    Plot.text([target], {x: dateExtent[0], y: d => d, text: d => `target ${d}`, dy: -6, textAnchor: "start", fontSize: 11}),
+    Plot.ruleY([0])
+  ]
+})
+```
+:::
+
+### Row {height=40%}
+
+::: {.card title="Avg calories per day by meal"}
+```{ojs}
+Plot.plot({
+  width: 400,
+  height: 200,
+  marginLeft: 70,
+  marginRight: 30,
+  x: {label: "Calories"},
+  y: {label: null, domain: mealList},
+  marks: [
+    Plot.barX(mealAvg, {x: "kcal", y: "meal", fill: "#4e79a7"}),
+    Plot.text(mealAvg, {x: "kcal", y: "meal", text: d => Math.round(d.kcal), dx: 4, textAnchor: "start", fontSize: 11}),
+    Plot.ruleX([0])
+  ]
+})
+```
+:::
+
+::: {.card title="Top foods by total calories"}
+```{ojs}
+Plot.plot({
+  width: 400,
+  height: 200,
+  marginLeft: 150,
+  x: {label: "Calories"},
+  y: {label: null, domain: topFoods.map(d => d.food)},
+  marks: [
+    Plot.barX(topFoods, {x: "kcal", y: "food", fill: "#4e79a7"}),
+    Plot.ruleX([0])
+  ]
+})
+```
+:::

@@ -1,0 +1,383 @@
+date,meal,food,category,servings,calories,protein_g,carbs_g,fat_g,fiber_g,sodium_mg
+2026-08-04,breakfast,Cold brew with milk,Drinks,1,45,2,4,2,0,30
+2026-08-04,lunch,Turkey sandwich,Grains,1,460,28,46,18,4,1280
+2026-08-04,dinner,Spaghetti bolognese,Grains,1.5,1080,48.0,132.0,36.0,10.5,1320
+2026-08-05,lunch,Sushi rolls (8 pc),Grains,1,380,14,62,8,3,920
+2026-08-05,dinner,Salmon with rice and broccoli,Protein,0.75,465,30.8,41.2,18.8,4.5,390
+2026-08-06,lunch,Sushi rolls (8 pc),Grains,1.25,475,17.5,77.5,10.0,3.8,1150
+2026-08-06,dinner,Salmon with rice and broccoli,Protein,1.25,775,51.2,68.8,31.2,7.5,650
+2026-08-06,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-08-07,breakfast,Scrambled eggs (2),Protein,1,190,13,2,14,0,340
+2026-08-07,lunch,Sushi rolls (8 pc),Grains,1,380,14,62,8,3,920
+2026-08-07,dinner,Black bean tacos (3),Legumes,0.75,428,15.8,58.5,14.2,11.2,592
+2026-08-07,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-08-07,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-08-08,breakfast,Scrambled eggs (2),Protein,1.15,218,14.9,2.3,16.1,0.0,391
+2026-08-08,lunch,Chicken burrito bowl,Protein,0.86,550,36.1,58.5,17.2,10.3,989
+2026-08-08,dinner,Veggie curry with naan,Vegetables,0.86,585,14.6,79.1,22.4,10.3,808
+2026-08-08,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-08-08,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-08-09,breakfast,Banana,Fruit,0.86,90,0.9,23.2,0.0,2.6,1
+2026-08-09,lunch,Caesar salad with chicken,Vegetables,0.86,413,29.2,15.5,26.7,3.4,843
+2026-08-09,dinner,Steak with potatoes,Protein,1.15,897,59.8,55.2,48.3,5.8,736
+2026-08-09,snack,Cheese and crackers,Dairy,1.5,375,13.5,31.5,22.5,1.5,690
+2026-08-09,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-08-09,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-08-10,breakfast,Cold brew with milk,Drinks,1,45,2,4,2,0,30
+2026-08-10,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-08-10,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-08-11,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-08-11,lunch,Tuna poke bowl,Protein,1,520,36,58,15,5,870
+2026-08-11,dinner,Spaghetti bolognese,Grains,1,720,32,88,24,7,880
+2026-08-11,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-08-11,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-08-12,breakfast,Banana,Fruit,1.5,158,1.5,40.5,0.0,4.5,2
+2026-08-12,lunch,Turkey sandwich,Grains,1.25,575,35.0,57.5,22.5,5.0,1600
+2026-08-12,dinner,Margherita pizza (3 slices),Grains,1,810,33,96,31,5,1460
+2026-08-13,breakfast,Greek yogurt with honey,Dairy,1.5,330,25.5,42.0,7.5,0.0,135
+2026-08-13,lunch,Tuna poke bowl,Protein,1.25,650,45.0,72.5,18.8,6.2,1088
+2026-08-13,dinner,Spaghetti bolognese,Grains,1.5,1080,48.0,132.0,36.0,10.5,1320
+2026-08-13,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-08-13,snack,Almonds (1 oz),Snacks,0.75,124,4.5,4.5,10.5,2.2,0
+2026-08-14,breakfast,Greek yogurt with honey,Dairy,0.75,165,12.8,21.0,3.8,0.0,68
+2026-08-14,lunch,Turkey sandwich,Grains,1.25,575,35.0,57.5,22.5,5.0,1600
+2026-08-14,dinner,Margherita pizza (3 slices),Grains,1,810,33,96,31,5,1460
+2026-08-14,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-08-14,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-08-15,breakfast,Scrambled eggs (2),Protein,1.15,218,14.9,2.3,16.1,0.0,391
+2026-08-15,lunch,Turkey sandwich,Grains,1.15,529,32.2,52.9,20.7,4.6,1472
+2026-08-15,dinner,Margherita pizza (3 slices),Grains,1.44,1166,47.5,138.2,44.6,7.2,2102
+2026-08-15,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-08-15,snack,Protein shake,Drinks,1.25,200,31.2,7.5,3.8,1.2,262
+2026-08-15,snack,Hummus and carrots,Vegetables,1.25,238,7.5,27.5,11.2,7.5,388
+2026-08-16,breakfast,Scrambled eggs (2),Protein,1.44,274,18.7,2.9,20.2,0.0,490
+2026-08-16,lunch,Caesar salad with chicken,Vegetables,0.86,413,29.2,15.5,26.7,3.4,843
+2026-08-16,dinner,Black bean tacos (3),Legumes,0.86,490,18.1,67.1,16.3,12.9,679
+2026-08-16,snack,Cheese and crackers,Dairy,0.75,188,6.8,15.8,11.2,0.8,345
+2026-08-16,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-08-17,breakfast,Banana,Fruit,0.75,79,0.8,20.2,0.0,2.2,1
+2026-08-17,lunch,Caesar salad with chicken,Vegetables,1,480,34,18,31,4,980
+2026-08-17,dinner,Steak with potatoes,Protein,1,780,52,48,42,5,640
+2026-08-17,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-08-17,snack,Potato chips,Snacks,0.75,172,2.2,17.2,11.2,1.5,255
+2026-08-18,breakfast,Cold brew with milk,Drinks,1.25,56,2.5,5.0,2.5,0.0,38
+2026-08-18,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-08-18,dinner,Black bean tacos (3),Legumes,1.5,855,31.5,117.0,28.5,22.5,1185
+2026-08-19,breakfast,Avocado toast,Grains,1,320,8,32,18,9,380
+2026-08-19,lunch,Caesar salad with chicken,Vegetables,0.75,360,25.5,13.5,23.2,3.0,735
+2026-08-19,dinner,Margherita pizza (3 slices),Grains,1.5,1215,49.5,144.0,46.5,7.5,2190
+2026-08-19,snack,Dark chocolate (2 sq),Snacks,1.25,150,1.2,12.5,11.2,2.5,6
+2026-08-20,breakfast,Granola bar,Snacks,1.5,285,6.0,43.5,10.5,3.0,158
+2026-08-20,lunch,Lentil soup,Legumes,1.5,495,27.0,78.0,7.5,24.0,1230
+2026-08-20,dinner,Steak with potatoes,Protein,1.25,975,65.0,60.0,52.5,6.2,800
+2026-08-21,breakfast,Granola bar,Snacks,1,190,4,29,7,2,105
+2026-08-21,lunch,Sushi rolls (8 pc),Grains,1.25,475,17.5,77.5,10.0,3.8,1150
+2026-08-21,dinner,Salmon with rice and broccoli,Protein,1.25,775,51.2,68.8,31.2,7.5,650
+2026-08-21,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-08-22,lunch,Veggie wrap,Vegetables,1.15,471,14.9,63.2,17.2,10.3,989
+2026-08-22,dinner,Spaghetti bolognese,Grains,0.86,619,27.5,75.7,20.6,6.0,757
+2026-08-22,snack,Almonds (1 oz),Snacks,1.25,206,7.5,7.5,17.5,3.8,0
+2026-08-22,snack,Apple with peanut butter,Fruit,0.75,202,5.2,24.0,10.5,4.5,68
+2026-08-23,breakfast,Granola bar,Snacks,1.44,274,5.8,41.8,10.1,2.9,151
+2026-08-23,lunch,Veggie wrap,Vegetables,1.15,471,14.9,63.2,17.2,10.3,989
+2026-08-23,dinner,Spaghetti bolognese,Grains,1.72,1238,55.0,151.4,41.3,12.0,1514
+2026-08-23,snack,Hummus and carrots,Vegetables,1.25,238,7.5,27.5,11.2,7.5,388
+2026-08-24,breakfast,Scrambled eggs (2),Protein,1.25,238,16.2,2.5,17.5,0.0,425
+2026-08-24,lunch,Veggie wrap,Vegetables,1.5,615,19.5,82.5,22.5,13.5,1290
+2026-08-24,dinner,Margherita pizza (3 slices),Grains,1,810,33,96,31,5,1460
+2026-08-24,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-08-24,snack,Hummus and carrots,Vegetables,1.5,285,9.0,33.0,13.5,9.0,465
+2026-08-25,breakfast,Banana,Fruit,1,105,1,27,0,3,1
+2026-08-25,lunch,Chicken burrito bowl,Protein,1,640,42,68,20,12,1150
+2026-08-25,dinner,Spaghetti bolognese,Grains,0.75,540,24.0,66.0,18.0,5.2,660
+2026-08-25,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-08-25,snack,Potato chips,Snacks,1.25,288,3.8,28.8,18.8,2.5,425
+2026-08-26,breakfast,Oatmeal with berries,Grains,0.75,210,6.8,37.5,3.8,5.2,90
+2026-08-26,lunch,Tuna poke bowl,Protein,1.5,780,54.0,87.0,22.5,7.5,1305
+2026-08-26,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-08-26,snack,Apple with peanut butter,Fruit,0.75,202,5.2,24.0,10.5,4.5,68
+2026-08-27,breakfast,Banana,Fruit,1,105,1,27,0,3,1
+2026-08-27,lunch,Lentil soup,Legumes,1.5,495,27.0,78.0,7.5,24.0,1230
+2026-08-27,dinner,Veggie curry with naan,Vegetables,1,680,17,92,26,12,940
+2026-08-28,breakfast,Scrambled eggs (2),Protein,1,190,13,2,14,0,340
+2026-08-28,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-08-28,dinner,Spaghetti bolognese,Grains,0.75,540,24.0,66.0,18.0,5.2,660
+2026-08-28,snack,Apple with peanut butter,Fruit,1.5,405,10.5,48.0,21.0,9.0,135
+2026-08-28,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-08-29,breakfast,Granola bar,Snacks,1.72,327,6.9,49.9,12.0,3.4,181
+2026-08-29,lunch,Chicken burrito bowl,Protein,1.72,1101,72.2,117.0,34.4,20.6,1978
+2026-08-29,dinner,Margherita pizza (3 slices),Grains,1.72,1393,56.8,165.1,53.3,8.6,2511
+2026-08-29,snack,Apple with peanut butter,Fruit,0.75,202,5.2,24.0,10.5,4.5,68
+2026-08-29,snack,Hummus and carrots,Vegetables,1.5,285,9.0,33.0,13.5,9.0,465
+2026-08-29,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-08-30,breakfast,Banana,Fruit,1.15,121,1.1,31.0,0.0,3.4,1
+2026-08-30,lunch,Turkey sandwich,Grains,1.15,529,32.2,52.9,20.7,4.6,1472
+2026-08-30,dinner,Spaghetti bolognese,Grains,1.15,828,36.8,101.2,27.6,8.0,1012
+2026-08-30,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-08-30,snack,Cheese and crackers,Dairy,0.75,188,6.8,15.8,11.2,0.8,345
+2026-08-31,breakfast,Oatmeal with berries,Grains,1.5,420,13.5,75.0,7.5,10.5,180
+2026-08-31,lunch,Sushi rolls (8 pc),Grains,0.75,285,10.5,46.5,6.0,2.2,690
+2026-08-31,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-09-01,breakfast,Avocado toast,Grains,1,320,8,32,18,9,380
+2026-09-01,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-09-01,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-09-01,snack,Hummus and carrots,Vegetables,0.75,142,4.5,16.5,6.8,4.5,232
+2026-09-01,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-09-02,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-09-02,lunch,Tuna poke bowl,Protein,1.5,780,54.0,87.0,22.5,7.5,1305
+2026-09-02,dinner,Black bean tacos (3),Legumes,1.25,712,26.2,97.5,23.8,18.8,988
+2026-09-02,snack,Protein shake,Drinks,1.5,240,37.5,9.0,4.5,1.5,315
+2026-09-02,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-09-03,breakfast,Oatmeal with berries,Grains,1.25,350,11.2,62.5,6.2,8.8,150
+2026-09-03,lunch,Tuna poke bowl,Protein,1.25,650,45.0,72.5,18.8,6.2,1088
+2026-09-03,dinner,Salmon with rice and broccoli,Protein,1.5,930,61.5,82.5,37.5,9.0,780
+2026-09-03,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-09-04,lunch,Sushi rolls (8 pc),Grains,1.25,475,17.5,77.5,10.0,3.8,1150
+2026-09-04,dinner,Spaghetti bolognese,Grains,0.75,540,24.0,66.0,18.0,5.2,660
+2026-09-04,snack,Potato chips,Snacks,0.75,172,2.2,17.2,11.2,1.5,255
+2026-09-04,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-09-05,lunch,Tuna poke bowl,Protein,1.15,598,41.4,66.7,17.2,5.8,1000
+2026-09-05,dinner,Veggie curry with naan,Vegetables,0.86,585,14.6,79.1,22.4,10.3,808
+2026-09-05,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-09-06,breakfast,Banana,Fruit,0.86,90,0.9,23.2,0.0,2.6,1
+2026-09-06,lunch,Caesar salad with chicken,Vegetables,1.72,826,58.5,31.0,53.3,6.9,1686
+2026-09-06,dinner,Steak with potatoes,Protein,1.44,1123,74.9,69.1,60.5,7.2,922
+2026-09-06,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-09-07,breakfast,Cold brew with milk,Drinks,1.5,68,3.0,6.0,3.0,0.0,45
+2026-09-07,lunch,Lentil soup,Legumes,1,330,18,52,5,16,820
+2026-09-07,dinner,Chicken stir-fry,Protein,1,540,38,46,20,6,1020
+2026-09-07,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-09-08,breakfast,Greek yogurt with honey,Dairy,0.75,165,12.8,21.0,3.8,0.0,68
+2026-09-08,lunch,Chicken burrito bowl,Protein,1,640,42,68,20,12,1150
+2026-09-08,dinner,Steak with potatoes,Protein,1.25,975,65.0,60.0,52.5,6.2,800
+2026-09-08,snack,Apple with peanut butter,Fruit,0.75,202,5.2,24.0,10.5,4.5,68
+2026-09-08,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-09-09,breakfast,Greek yogurt with honey,Dairy,0.75,165,12.8,21.0,3.8,0.0,68
+2026-09-09,lunch,Turkey sandwich,Grains,1,460,28,46,18,4,1280
+2026-09-09,dinner,Chicken stir-fry,Protein,1,540,38,46,20,6,1020
+2026-09-09,snack,Hummus and carrots,Vegetables,1.25,238,7.5,27.5,11.2,7.5,388
+2026-09-10,breakfast,Cold brew with milk,Drinks,1.25,56,2.5,5.0,2.5,0.0,38
+2026-09-10,lunch,Lentil soup,Legumes,1.5,495,27.0,78.0,7.5,24.0,1230
+2026-09-10,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-09-11,breakfast,Cold brew with milk,Drinks,1.25,56,2.5,5.0,2.5,0.0,38
+2026-09-11,lunch,Turkey sandwich,Grains,1,460,28,46,18,4,1280
+2026-09-11,dinner,Chicken stir-fry,Protein,1.25,675,47.5,57.5,25.0,7.5,1275
+2026-09-12,breakfast,Scrambled eggs (2),Protein,1.72,327,22.4,3.4,24.1,0.0,585
+2026-09-12,lunch,Tuna poke bowl,Protein,1.15,598,41.4,66.7,17.2,5.8,1000
+2026-09-12,dinner,Steak with potatoes,Protein,1.15,897,59.8,55.2,48.3,5.8,736
+2026-09-12,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-09-12,snack,Apple with peanut butter,Fruit,1.5,405,10.5,48.0,21.0,9.0,135
+2026-09-13,breakfast,Oatmeal with berries,Grains,0.86,241,7.7,43.0,4.3,6.0,103
+2026-09-13,lunch,Lentil soup,Legumes,1.15,379,20.7,59.8,5.8,18.4,943
+2026-09-13,dinner,Margherita pizza (3 slices),Grains,1.15,931,37.9,110.4,35.6,5.8,1679
+2026-09-13,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-09-13,snack,Hummus and carrots,Vegetables,1.25,238,7.5,27.5,11.2,7.5,388
+2026-09-14,breakfast,Oatmeal with berries,Grains,0.75,210,6.8,37.5,3.8,5.2,90
+2026-09-14,lunch,Tuna poke bowl,Protein,1,520,36,58,15,5,870
+2026-09-14,dinner,Steak with potatoes,Protein,0.75,585,39.0,36.0,31.5,3.8,480
+2026-09-15,breakfast,Avocado toast,Grains,1,320,8,32,18,9,380
+2026-09-15,lunch,Chicken burrito bowl,Protein,1,640,42,68,20,12,1150
+2026-09-15,dinner,Chicken stir-fry,Protein,0.75,405,28.5,34.5,15.0,4.5,765
+2026-09-15,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-09-16,breakfast,Greek yogurt with honey,Dairy,1.25,275,21.2,35.0,6.2,0.0,112
+2026-09-16,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-09-16,dinner,Steak with potatoes,Protein,1.5,1170,78.0,72.0,63.0,7.5,960
+2026-09-17,breakfast,Granola bar,Snacks,1,190,4,29,7,2,105
+2026-09-17,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-09-17,dinner,Veggie curry with naan,Vegetables,0.75,510,12.8,69.0,19.5,9.0,705
+2026-09-17,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-09-18,breakfast,Granola bar,Snacks,1.5,285,6.0,43.5,10.5,3.0,158
+2026-09-18,lunch,Veggie wrap,Vegetables,1.5,615,19.5,82.5,22.5,13.5,1290
+2026-09-18,dinner,Black bean tacos (3),Legumes,1,570,21,78,19,15,790
+2026-09-18,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-09-18,snack,Cheese and crackers,Dairy,1.5,375,13.5,31.5,22.5,1.5,690
+2026-09-19,lunch,Veggie wrap,Vegetables,1.15,471,14.9,63.2,17.2,10.3,989
+2026-09-19,dinner,Spaghetti bolognese,Grains,1.15,828,36.8,101.2,27.6,8.0,1012
+2026-09-19,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-09-20,breakfast,Scrambled eggs (2),Protein,0.86,163,11.2,1.7,12.0,0.0,292
+2026-09-20,lunch,Tuna poke bowl,Protein,1.15,598,41.4,66.7,17.2,5.8,1000
+2026-09-20,dinner,Veggie curry with naan,Vegetables,1.15,782,19.5,105.8,29.9,13.8,1081
+2026-09-20,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-09-20,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-09-21,breakfast,Cold brew with milk,Drinks,1.25,56,2.5,5.0,2.5,0.0,38
+2026-09-21,lunch,Lentil soup,Legumes,0.75,248,13.5,39.0,3.8,12.0,615
+2026-09-21,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-09-21,snack,Almonds (1 oz),Snacks,1.25,206,7.5,7.5,17.5,3.8,0
+2026-09-21,snack,Dark chocolate (2 sq),Snacks,0.75,90,0.8,7.5,6.8,1.5,4
+2026-09-22,lunch,Lentil soup,Legumes,1.5,495,27.0,78.0,7.5,24.0,1230
+2026-09-22,dinner,Black bean tacos (3),Legumes,1,570,21,78,19,15,790
+2026-09-22,snack,Hummus and carrots,Vegetables,1.25,238,7.5,27.5,11.2,7.5,388
+2026-09-22,snack,Potato chips,Snacks,0.75,172,2.2,17.2,11.2,1.5,255
+2026-09-23,breakfast,Greek yogurt with honey,Dairy,0.75,165,12.8,21.0,3.8,0.0,68
+2026-09-23,lunch,Tuna poke bowl,Protein,1,520,36,58,15,5,870
+2026-09-23,dinner,Salmon with rice and broccoli,Protein,1.25,775,51.2,68.8,31.2,7.5,650
+2026-09-23,snack,Cheese and crackers,Dairy,1.25,312,11.2,26.2,18.8,1.2,575
+2026-09-24,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-09-24,lunch,Chicken burrito bowl,Protein,1.5,960,63.0,102.0,30.0,18.0,1725
+2026-09-24,dinner,Chicken stir-fry,Protein,1.25,675,47.5,57.5,25.0,7.5,1275
+2026-09-24,snack,Dark chocolate (2 sq),Snacks,1.5,180,1.5,15.0,13.5,3.0,8
+2026-09-25,breakfast,Banana,Fruit,1,105,1,27,0,3,1
+2026-09-25,lunch,Tuna poke bowl,Protein,1,520,36,58,15,5,870
+2026-09-25,dinner,Chicken stir-fry,Protein,1,540,38,46,20,6,1020
+2026-09-25,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-09-26,breakfast,Avocado toast,Grains,1.72,550,13.8,55.0,31.0,15.5,654
+2026-09-26,lunch,Caesar salad with chicken,Vegetables,1.72,826,58.5,31.0,53.3,6.9,1686
+2026-09-26,dinner,Margherita pizza (3 slices),Grains,1.15,931,37.9,110.4,35.6,5.8,1679
+2026-09-26,snack,Potato chips,Snacks,1.25,288,3.8,28.8,18.8,2.5,425
+2026-09-26,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-09-27,breakfast,Greek yogurt with honey,Dairy,1.15,253,19.5,32.2,5.8,0.0,103
+2026-09-27,lunch,Turkey sandwich,Grains,1.15,529,32.2,52.9,20.7,4.6,1472
+2026-09-27,dinner,Black bean tacos (3),Legumes,1.44,821,30.2,112.3,27.4,21.6,1138
+2026-09-27,snack,Potato chips,Snacks,1.5,345,4.5,34.5,22.5,3.0,510
+2026-09-28,breakfast,Avocado toast,Grains,1.5,480,12.0,48.0,27.0,13.5,570
+2026-09-28,lunch,Turkey sandwich,Grains,1.25,575,35.0,57.5,22.5,5.0,1600
+2026-09-28,dinner,Veggie curry with naan,Vegetables,1.5,1020,25.5,138.0,39.0,18.0,1410
+2026-09-28,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-09-28,snack,Apple with peanut butter,Fruit,1,270,7,32,14,6,90
+2026-09-29,breakfast,Oatmeal with berries,Grains,1,280,9,50,5,7,120
+2026-09-29,lunch,Tuna poke bowl,Protein,1,520,36,58,15,5,870
+2026-09-29,dinner,Spaghetti bolognese,Grains,1,720,32,88,24,7,880
+2026-09-29,snack,Almonds (1 oz),Snacks,0.75,124,4.5,4.5,10.5,2.2,0
+2026-09-30,lunch,Sushi rolls (8 pc),Grains,0.75,285,10.5,46.5,6.0,2.2,690
+2026-09-30,dinner,Veggie curry with naan,Vegetables,1,680,17,92,26,12,940
+2026-09-30,snack,Protein shake,Drinks,1.25,200,31.2,7.5,3.8,1.2,262
+2026-09-30,snack,Almonds (1 oz),Snacks,1.5,248,9.0,9.0,21.0,4.5,0
+2026-10-01,breakfast,Avocado toast,Grains,1,320,8,32,18,9,380
+2026-10-01,lunch,Turkey sandwich,Grains,1.5,690,42.0,69.0,27.0,6.0,1920
+2026-10-01,dinner,Margherita pizza (3 slices),Grains,0.75,608,24.8,72.0,23.2,3.8,1095
+2026-10-01,snack,Cheese and crackers,Dairy,0.75,188,6.8,15.8,11.2,0.8,345
+2026-10-01,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-10-02,breakfast,Oatmeal with berries,Grains,1.25,350,11.2,62.5,6.2,8.8,150
+2026-10-02,lunch,Turkey sandwich,Grains,0.75,345,21.0,34.5,13.5,3.0,960
+2026-10-02,dinner,Veggie curry with naan,Vegetables,1,680,17,92,26,12,940
+2026-10-02,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-10-02,snack,Protein shake,Drinks,1.25,200,31.2,7.5,3.8,1.2,262
+2026-10-03,breakfast,Granola bar,Snacks,1.15,218,4.6,33.3,8.0,2.3,121
+2026-10-03,lunch,Sushi rolls (8 pc),Grains,1.72,654,24.1,106.6,13.8,5.2,1582
+2026-10-03,dinner,Steak with potatoes,Protein,1.15,897,59.8,55.2,48.3,5.8,736
+2026-10-03,snack,Cheese and crackers,Dairy,1.25,312,11.2,26.2,18.8,1.2,575
+2026-10-03,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-10-04,breakfast,Avocado toast,Grains,1.15,368,9.2,36.8,20.7,10.3,437
+2026-10-04,lunch,Veggie wrap,Vegetables,1.15,471,14.9,63.2,17.2,10.3,989
+2026-10-04,dinner,Black bean tacos (3),Legumes,1.72,980,36.1,134.2,32.7,25.8,1359
+2026-10-04,snack,Dark chocolate (2 sq),Snacks,1.25,150,1.2,12.5,11.2,2.5,6
+2026-10-04,snack,Hummus and carrots,Vegetables,1.5,285,9.0,33.0,13.5,9.0,465
+2026-10-04,snack,Almonds (1 oz),Snacks,1,165,6,6,14,3,0
+2026-10-05,breakfast,Scrambled eggs (2),Protein,1,190,13,2,14,0,340
+2026-10-05,lunch,Lentil soup,Legumes,1,330,18,52,5,16,820
+2026-10-05,dinner,Steak with potatoes,Protein,0.75,585,39.0,36.0,31.5,3.8,480
+2026-10-05,snack,Almonds (1 oz),Snacks,1,165,6,6,14,3,0
+2026-10-06,breakfast,Cold brew with milk,Drinks,1,45,2,4,2,0,30
+2026-10-06,lunch,Chicken burrito bowl,Protein,1,640,42,68,20,12,1150
+2026-10-06,dinner,Veggie curry with naan,Vegetables,1,680,17,92,26,12,940
+2026-10-06,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-10-07,breakfast,Granola bar,Snacks,1,190,4,29,7,2,105
+2026-10-07,lunch,Caesar salad with chicken,Vegetables,1.25,600,42.5,22.5,38.8,5.0,1225
+2026-10-07,dinner,Margherita pizza (3 slices),Grains,0.75,608,24.8,72.0,23.2,3.8,1095
+2026-10-07,snack,Cheese and crackers,Dairy,1.25,312,11.2,26.2,18.8,1.2,575
+2026-10-08,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-10-08,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-10-08,dinner,Black bean tacos (3),Legumes,1,570,21,78,19,15,790
+2026-10-09,breakfast,Avocado toast,Grains,1,320,8,32,18,9,380
+2026-10-09,lunch,Lentil soup,Legumes,1,330,18,52,5,16,820
+2026-10-09,dinner,Veggie curry with naan,Vegetables,0.75,510,12.8,69.0,19.5,9.0,705
+2026-10-09,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-10-10,breakfast,Cold brew with milk,Drinks,1.15,52,2.3,4.6,2.3,0.0,34
+2026-10-10,lunch,Veggie wrap,Vegetables,1.15,471,14.9,63.2,17.2,10.3,989
+2026-10-10,dinner,Spaghetti bolognese,Grains,1.44,1037,46.1,126.7,34.6,10.1,1267
+2026-10-10,snack,Potato chips,Snacks,0.75,172,2.2,17.2,11.2,1.5,255
+2026-10-10,snack,Hummus and carrots,Vegetables,1.25,238,7.5,27.5,11.2,7.5,388
+2026-10-10,snack,Potato chips,Snacks,1.5,345,4.5,34.5,22.5,3.0,510
+2026-10-11,lunch,Turkey sandwich,Grains,1.15,529,32.2,52.9,20.7,4.6,1472
+2026-10-11,dinner,Spaghetti bolognese,Grains,0.86,619,27.5,75.7,20.6,6.0,757
+2026-10-11,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-10-11,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-10-11,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-10-12,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-10-12,lunch,Lentil soup,Legumes,0.75,248,13.5,39.0,3.8,12.0,615
+2026-10-12,dinner,Veggie curry with naan,Vegetables,0.75,510,12.8,69.0,19.5,9.0,705
+2026-10-12,snack,Protein shake,Drinks,1.25,200,31.2,7.5,3.8,1.2,262
+2026-10-12,snack,Apple with peanut butter,Fruit,1,270,7,32,14,6,90
+2026-10-13,breakfast,Granola bar,Snacks,1.5,285,6.0,43.5,10.5,3.0,158
+2026-10-13,lunch,Chicken burrito bowl,Protein,0.75,480,31.5,51.0,15.0,9.0,862
+2026-10-13,dinner,Spaghetti bolognese,Grains,1,720,32,88,24,7,880
+2026-10-14,breakfast,Scrambled eggs (2),Protein,1,190,13,2,14,0,340
+2026-10-14,lunch,Caesar salad with chicken,Vegetables,1.5,720,51.0,27.0,46.5,6.0,1470
+2026-10-14,dinner,Salmon with rice and broccoli,Protein,1.25,775,51.2,68.8,31.2,7.5,650
+2026-10-14,snack,Almonds (1 oz),Snacks,1,165,6,6,14,3,0
+2026-10-15,breakfast,Scrambled eggs (2),Protein,1.25,238,16.2,2.5,17.5,0.0,425
+2026-10-15,lunch,Sushi rolls (8 pc),Grains,1.5,570,21.0,93.0,12.0,4.5,1380
+2026-10-15,dinner,Margherita pizza (3 slices),Grains,0.75,608,24.8,72.0,23.2,3.8,1095
+2026-10-15,snack,Cheese and crackers,Dairy,1,250,9,21,15,1,460
+2026-10-16,breakfast,Banana,Fruit,0.75,79,0.8,20.2,0.0,2.2,1
+2026-10-16,lunch,Lentil soup,Legumes,1.25,412,22.5,65.0,6.2,20.0,1025
+2026-10-16,dinner,Margherita pizza (3 slices),Grains,1,810,33,96,31,5,1460
+2026-10-17,breakfast,Oatmeal with berries,Grains,1.44,403,13.0,72.0,7.2,10.1,173
+2026-10-17,lunch,Tuna poke bowl,Protein,1.72,894,61.9,99.8,25.8,8.6,1496
+2026-10-17,dinner,Spaghetti bolognese,Grains,0.86,619,27.5,75.7,20.6,6.0,757
+2026-10-17,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-10-17,snack,Cheese and crackers,Dairy,1.5,375,13.5,31.5,22.5,1.5,690
+2026-10-18,breakfast,Granola bar,Snacks,1.44,274,5.8,41.8,10.1,2.9,151
+2026-10-18,lunch,Veggie wrap,Vegetables,0.86,353,11.2,47.3,12.9,7.7,740
+2026-10-18,dinner,Chicken stir-fry,Protein,1.44,778,54.7,66.2,28.8,8.6,1469
+2026-10-18,snack,Hummus and carrots,Vegetables,1.5,285,9.0,33.0,13.5,9.0,465
+2026-10-19,breakfast,Oatmeal with berries,Grains,1,280,9,50,5,7,120
+2026-10-19,lunch,Veggie wrap,Vegetables,1,410,13,55,15,9,860
+2026-10-19,dinner,Salmon with rice and broccoli,Protein,1,620,41,55,25,6,520
+2026-10-19,snack,Dark chocolate (2 sq),Snacks,1.5,180,1.5,15.0,13.5,3.0,8
+2026-10-20,breakfast,Cold brew with milk,Drinks,1,45,2,4,2,0,30
+2026-10-20,lunch,Caesar salad with chicken,Vegetables,1,480,34,18,31,4,980
+2026-10-20,dinner,Margherita pizza (3 slices),Grains,1.25,1012,41.2,120.0,38.8,6.2,1825
+2026-10-20,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-10-20,snack,Potato chips,Snacks,1.25,288,3.8,28.8,18.8,2.5,425
+2026-10-21,breakfast,Avocado toast,Grains,1.5,480,12.0,48.0,27.0,13.5,570
+2026-10-21,lunch,Sushi rolls (8 pc),Grains,1,380,14,62,8,3,920
+2026-10-21,dinner,Chicken stir-fry,Protein,1,540,38,46,20,6,1020
+2026-10-21,snack,Cheese and crackers,Dairy,0.75,188,6.8,15.8,11.2,0.8,345
+2026-10-21,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-10-22,breakfast,Banana,Fruit,1.25,131,1.2,33.8,0.0,3.8,1
+2026-10-22,lunch,Tuna poke bowl,Protein,1,520,36,58,15,5,870
+2026-10-22,dinner,Chicken stir-fry,Protein,0.75,405,28.5,34.5,15.0,4.5,765
+2026-10-22,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-10-22,snack,Almonds (1 oz),Snacks,1,165,6,6,14,3,0
+2026-10-23,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-10-23,lunch,Sushi rolls (8 pc),Grains,1.5,570,21.0,93.0,12.0,4.5,1380
+2026-10-23,dinner,Chicken stir-fry,Protein,1.25,675,47.5,57.5,25.0,7.5,1275
+2026-10-23,snack,Apple with peanut butter,Fruit,1.25,338,8.8,40.0,17.5,7.5,112
+2026-10-24,breakfast,Scrambled eggs (2),Protein,1.72,327,22.4,3.4,24.1,0.0,585
+2026-10-24,lunch,Caesar salad with chicken,Vegetables,1.15,552,39.1,20.7,35.6,4.6,1127
+2026-10-24,dinner,Steak with potatoes,Protein,1.15,897,59.8,55.2,48.3,5.8,736
+2026-10-24,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-10-25,breakfast,Avocado toast,Grains,0.86,275,6.9,27.5,15.5,7.7,327
+2026-10-25,lunch,Chicken burrito bowl,Protein,1.15,736,48.3,78.2,23.0,13.8,1322
+2026-10-25,dinner,Spaghetti bolognese,Grains,1.15,828,36.8,101.2,27.6,8.0,1012
+2026-10-25,snack,Protein shake,Drinks,1,160,25,6,3,1,210
+2026-10-25,snack,Dark chocolate (2 sq),Snacks,1.5,180,1.5,15.0,13.5,3.0,8
+2026-10-25,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-10-26,breakfast,Avocado toast,Grains,1.5,480,12.0,48.0,27.0,13.5,570
+2026-10-26,lunch,Sushi rolls (8 pc),Grains,1,380,14,62,8,3,920
+2026-10-26,dinner,Chicken stir-fry,Protein,1.5,810,57.0,69.0,30.0,9.0,1530
+2026-10-26,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-10-27,breakfast,Oatmeal with berries,Grains,1.5,420,13.5,75.0,7.5,10.5,180
+2026-10-27,lunch,Turkey sandwich,Grains,1,460,28,46,18,4,1280
+2026-10-27,dinner,Salmon with rice and broccoli,Protein,1.5,930,61.5,82.5,37.5,9.0,780
+2026-10-27,snack,Potato chips,Snacks,1.5,345,4.5,34.5,22.5,3.0,510
+2026-10-28,breakfast,Cold brew with milk,Drinks,1,45,2,4,2,0,30
+2026-10-28,lunch,Lentil soup,Legumes,1.5,495,27.0,78.0,7.5,24.0,1230
+2026-10-28,dinner,Steak with potatoes,Protein,1.25,975,65.0,60.0,52.5,6.2,800
+2026-10-28,snack,Potato chips,Snacks,1,230,3,23,15,2,340
+2026-10-29,breakfast,Greek yogurt with honey,Dairy,1,220,17,28,5,0,90
+2026-10-29,lunch,Lentil soup,Legumes,1,330,18,52,5,16,820
+2026-10-29,dinner,Chicken stir-fry,Protein,0.75,405,28.5,34.5,15.0,4.5,765
+2026-10-29,snack,Protein shake,Drinks,1.25,200,31.2,7.5,3.8,1.2,262
+2026-10-30,lunch,Chicken burrito bowl,Protein,1.25,800,52.5,85.0,25.0,15.0,1438
+2026-10-30,dinner,Chicken stir-fry,Protein,1.5,810,57.0,69.0,30.0,9.0,1530
+2026-10-31,breakfast,Oatmeal with berries,Grains,0.86,241,7.7,43.0,4.3,6.0,103
+2026-10-31,lunch,Sushi rolls (8 pc),Grains,1.15,437,16.1,71.3,9.2,3.4,1058
+2026-10-31,dinner,Veggie curry with naan,Vegetables,1.15,782,19.5,105.8,29.9,13.8,1081
+2026-10-31,snack,Hummus and carrots,Vegetables,1,190,6,22,9,6,310
+2026-10-31,snack,Almonds (1 oz),Snacks,0.75,124,4.5,4.5,10.5,2.2,0
+2026-10-31,snack,Dark chocolate (2 sq),Snacks,1,120,1,10,9,2,5
+2026-11-01,lunch,Caesar salad with chicken,Vegetables,1.15,552,39.1,20.7,35.6,4.6,1127
+2026-11-01,dinner,Salmon with rice and broccoli,Protein,1.44,893,59.0,79.2,36.0,8.6,749
+2026-11-01,snack,Protein shake,Drinks,1.5,240,37.5,9.0,4.5,1.5,315
