@@ -9,7 +9,7 @@ A small [Quarto](https://quarto.org) document showing several ways to build inte
 
 Live page: https://colemanto.github.io/quarto-viz-demo/
 
-There's also a [Quarto dashboard](dashboard.qmd) of the penguins data (value boxes plus three Altair charts), published at `/dashboard.html`.
+There's also a [Quarto dashboard](dashboard.qmd) of the penguins data (value boxes and three Observable Plot charts, with sidebar filters), published at `/dashboard.html`.
 
 ## Run locally
 

@@ -6,79 +6,168 @@ format:
     nav-buttons:
       - icon: github
         href: https://github.com/colemanto/quarto-viz-demo
-jupyter: python3
 ---
 
-```{python}
-#| label: setup
-import altair as alt
-import pandas as pd
+```{ojs}
+//| output: false
+Plot = require("@observablehq/plot")
+```
 
-penguins = pd.read_csv("penguins.csv").dropna()
-species_colors = alt.Scale(
-    domain=["Adelie", "Chinstrap", "Gentoo"],
-    range=["#ff8c00", "#a034f0", "#159090"],
+```{ojs}
+//| output: false
+all = (await FileAttachment("penguins.csv").csv({typed: true}))
+  .filter(d => d.sex && d.bill_length_mm != null)
+```
+
+```{ojs}
+//| output: false
+speciesList = ["Adelie", "Chinstrap", "Gentoo"]
+```
+
+```{ojs}
+//| output: false
+islandList = Array.from(new Set(all.map(d => d.island))).sort()
+```
+
+```{ojs}
+//| output: false
+massExtent = d3.extent(all, d => d.body_mass_g)
+```
+
+```{ojs}
+//| output: false
+colorScale = {
+  return {
+    domain: speciesList,
+    range: ["#ff8c00", "#a034f0", "#159090"],
+    legend: true
+  };
+}
+```
+
+```{ojs}
+//| output: false
+filtered = all.filter(d =>
+  species.includes(d.species) &&
+  islands.includes(d.island) &&
+  (sex === "All" || d.sex === sex.toUpperCase()) &&
+  d.body_mass_g >= massRange[0] && d.body_mass_g <= massRange[1]
 )
+```
+
+```{=html}
+<style>
+  .value-box-area .observablehq { font-size: 2.8rem; font-weight: 500; line-height: 1.2; }
+</style>
+```
+
+## {.sidebar}
+
+```{ojs}
+viewof species = Inputs.checkbox(speciesList, {label: "Species", value: speciesList})
+```
+
+```{ojs}
+viewof islands = Inputs.checkbox(islandList, {label: "Island", value: islandList})
+```
+
+```{ojs}
+viewof sex = Inputs.radio(["All", "Female", "Male"], {label: "Sex", value: "All"})
+```
+
+```{ojs}
+viewof massRange = {
+  const lo = Inputs.range(massExtent, {label: "Min mass (g)", step: 50, value: massExtent[0]});
+  const hi = Inputs.range(massExtent, {label: "Max mass (g)", step: 50, value: massExtent[1]});
+  const form = html`<div>${lo}${hi}</div>`;
+  const update = () => form.value = [Math.min(lo.value, hi.value), Math.max(lo.value, hi.value)];
+  update();
+  form.oninput = e => {
+    if (e.target === form) return;
+    e.stopPropagation();
+    update();
+    form.dispatchEvent(new CustomEvent("input"));
+  };
+  return form;
+}
 ```
 
 ## Column {width=25%}
 
-```{python}
-#| component: valuebox
-#| title: "Penguins measured"
-#| icon: database
-#| color: primary
-dict(value=f"{len(penguins):,}")
-```
+::: {.valuebox icon="database" color="primary"}
+Penguins shown
 
-```{python}
-#| component: valuebox
-#| title: "Avg body mass (g)"
-#| icon: speedometer2
-#| color: info
-dict(value=f"{penguins.body_mass_g.mean():,.0f}")
-```
+`{ojs} filtered.length.toLocaleString()`
+:::
 
-```{python}
-#| component: valuebox
-#| title: "Islands"
-#| icon: geo-alt
-#| color: success
-dict(value=penguins.island.nunique())
-```
+::: {.valuebox icon="speedometer2" color="info"}
+Avg body mass (g)
+
+`{ojs} filtered.length ? Math.round(d3.mean(filtered, d => d.body_mass_g)).toLocaleString() : "–"`
+:::
+
+::: {.valuebox icon="geo-alt" color="success"}
+Islands
+
+`{ojs} new Set(filtered.map(d => d.island)).size`
+:::
 
 ## Column {width=75%}
 
 ### Row {height=60%}
 
-```{python}
-#| title: Bill length vs. depth
-alt.Chart(penguins).mark_point(filled=True, opacity=0.7).encode(
-    x=alt.X("bill_length_mm:Q", scale=alt.Scale(zero=False), title="Bill length (mm)"),
-    y=alt.Y("bill_depth_mm:Q", scale=alt.Scale(zero=False), title="Bill depth (mm)"),
-    color=alt.Color("species:N", scale=species_colors),
-    tooltip=["species", "island", "sex", "body_mass_g"],
-).properties(width="container", height="container").interactive()
+::: {.card title="Bill length vs. depth"}
+```{ojs}
+Plot.plot({
+  width: 760,
+  height: 340,
+  grid: true,
+  x: {label: "Bill length (mm)", domain: d3.extent(all, d => d.bill_length_mm), nice: true},
+  y: {label: "Bill depth (mm)", domain: d3.extent(all, d => d.bill_depth_mm), nice: true},
+  color: colorScale,
+  marks: [
+    Plot.dot(filtered, {
+      x: "bill_length_mm", y: "bill_depth_mm", fill: "species",
+      fillOpacity: 0.7, r: 3.5,
+      title: d => `${d.species}, ${d.island}\n${d.sex.toLowerCase()}, ${d.body_mass_g} g`,
+      tip: true
+    })
+  ]
+})
 ```
+:::
 
 ### Row {height=40%}
 
 ::: {.card title="Species by island"}
-```{python}
-alt.Chart(penguins).mark_bar().encode(
-    y=alt.Y("island:N", title=None),
-    x=alt.X("count()", title="Penguins"),
-    color=alt.Color("species:N", scale=species_colors),
-).properties(width="container", height="container")
+```{ojs}
+Plot.plot({
+  width: 400,
+  height: 200,
+  marginLeft: 70,
+  x: {label: "Penguins"},
+  y: {label: null, domain: islandList},
+  color: colorScale,
+  marks: [
+    Plot.barX(filtered, Plot.groupY({x: "count"}, {y: "island", fill: "species"})),
+    Plot.ruleX([0])
+  ]
+})
 ```
 :::
 
 ::: {.card title="Body mass distribution"}
-```{python}
-alt.Chart(penguins).mark_bar(opacity=0.8).encode(
-    x=alt.X("body_mass_g:Q", bin=alt.Bin(maxbins=25), title="Body mass (g)"),
-    y=alt.Y("count()", title=None),
-    color=alt.Color("species:N", scale=species_colors),
-).properties(width="container", height="container")
+```{ojs}
+Plot.plot({
+  width: 400,
+  height: 200,
+  x: {label: "Body mass (g)", domain: [massExtent[0] - 100, massExtent[1] + 100]},
+  y: {label: null},
+  color: colorScale,
+  marks: [
+    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "body_mass_g", fill: "species", thresholds: 25})),
+    Plot.ruleY([0])
+  ]
+})
 ```
 :::
