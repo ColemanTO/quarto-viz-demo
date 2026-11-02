@@ -1,0 +1,84 @@
+---
+title: "Penguins Dashboard"
+format:
+  dashboard:
+    orientation: columns
+    nav-buttons:
+      - icon: github
+        href: https://github.com/colemanto/quarto-viz-demo
+jupyter: python3
+---
+
+```{python}
+#| label: setup
+import altair as alt
+import pandas as pd
+
+penguins = pd.read_csv("penguins.csv").dropna()
+species_colors = alt.Scale(
+    domain=["Adelie", "Chinstrap", "Gentoo"],
+    range=["#ff8c00", "#a034f0", "#159090"],
+)
+```
+
+## Column {width=25%}
+
+```{python}
+#| component: valuebox
+#| title: "Penguins measured"
+#| icon: database
+#| color: primary
+dict(value=f"{len(penguins):,}")
+```
+
+```{python}
+#| component: valuebox
+#| title: "Avg body mass (g)"
+#| icon: speedometer2
+#| color: info
+dict(value=f"{penguins.body_mass_g.mean():,.0f}")
+```
+
+```{python}
+#| component: valuebox
+#| title: "Islands"
+#| icon: geo-alt
+#| color: success
+dict(value=penguins.island.nunique())
+```
+
+## Column {width=75%}
+
+### Row {height=60%}
+
+```{python}
+#| title: Bill length vs. depth
+alt.Chart(penguins).mark_point(filled=True, opacity=0.7).encode(
+    x=alt.X("bill_length_mm:Q", scale=alt.Scale(zero=False), title="Bill length (mm)"),
+    y=alt.Y("bill_depth_mm:Q", scale=alt.Scale(zero=False), title="Bill depth (mm)"),
+    color=alt.Color("species:N", scale=species_colors),
+    tooltip=["species", "island", "sex", "body_mass_g"],
+).properties(width="container", height="container").interactive()
+```
+
+### Row {height=40%}
+
+::: {.card title="Species by island"}
+```{python}
+alt.Chart(penguins).mark_bar().encode(
+    y=alt.Y("island:N", title=None),
+    x=alt.X("count()", title="Penguins"),
+    color=alt.Color("species:N", scale=species_colors),
+).properties(width="container", height="container")
+```
+:::
+
+::: {.card title="Body mass distribution"}
+```{python}
+alt.Chart(penguins).mark_bar(opacity=0.8).encode(
+    x=alt.X("body_mass_g:Q", bin=alt.Bin(maxbins=25), title="Body mass (g)"),
+    y=alt.Y("count()", title=None),
+    color=alt.Color("species:N", scale=species_colors),
+).properties(width="container", height="container")
+```
+:::
