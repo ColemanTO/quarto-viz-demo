@@ -53,7 +53,9 @@ daily = Array.from(
     calories: d3.sum(v, d => d.calories),
     protein: d3.sum(v, d => d.protein_g),
     carbs: d3.sum(v, d => d.carbs_g),
-    fat: d3.sum(v, d => d.fat_g)
+    fat: d3.sum(v, d => d.fat_g),
+    fiber: d3.sum(v, d => d.fiber_g),
+    sodium: d3.sum(v, d => d.sodium_mg)
   }), d => +d.date),
   ([t, v]) => ({date: new Date(t), ...v})
 ).sort((a, b) => a.date - b.date)
@@ -89,13 +91,45 @@ topFoods = Array.from(
 onTarget = daily.filter(d => Math.abs(d.calories - target) <= target * 0.1).length
 ```
 
+```{ojs}
+//| output: false
+nutrientRefs = [
+  {nutrient: "Protein", field: "protein", ref: 50, unit: "g", kind: "goal"},
+  {nutrient: "Fiber", field: "fiber", ref: 28, unit: "g", kind: "goal"},
+  {nutrient: "Sodium", field: "sodium", ref: 2300, unit: "mg", kind: "limit"}
+]
+```
+
+```{ojs}
+//| output: false
+adequacy = nutrientRefs.map(n => {
+  const pct = daily.length ? 100 * d3.mean(daily, d => d[n.field]) / n.ref : 0;
+  const met = daily.length
+    ? 100 * daily.filter(d => n.kind === "goal" ? d[n.field] >= n.ref : d[n.field] <= n.ref).length / daily.length
+    : 0;
+  const ok = n.kind === "goal" ? pct >= 100 : pct <= 100;
+  return {...n, pct, met, status: ok ? "On track" : (n.kind === "goal" ? "Below goal" : "Over limit")};
+})
+```
+
+```{ojs}
+//| output: false
+statusColor = {
+  return {
+    domain: ["On track", "Below goal", "Over limit"],
+    range: ["#2a9d8f", "#e9c46a", "#e76f51"],
+    legend: true
+  };
+}
+```
+
 ```{=html}
 <style>
   .value-box-area .observablehq { font-size: 2.8rem; font-weight: 500; line-height: 1.2; }
 </style>
 ```
 
-## {.sidebar}
+# {.sidebar}
 
 ```{ojs}
 viewof fromDate = Inputs.date({label: "From", value: dateExtent[0], min: dateExtent[0], max: dateExtent[1]})
@@ -114,6 +148,8 @@ viewof target = Inputs.number([1200, 4000], {label: "Calorie target", value: 200
 ```
 
 Days within 10% of the target count as on target. Turning meals off shows partial daily totals.
+
+# Calories
 
 ## Column {width=25%}
 
@@ -187,6 +223,54 @@ Plot.plot({
   y: {label: null, domain: topFoods.map(d => d.food)},
   marks: [
     Plot.barX(topFoods, {x: "kcal", y: "food", fill: "#4e79a7"}),
+    Plot.ruleX([0])
+  ]
+})
+```
+:::
+
+# Nutrients
+
+## Column
+
+::: {.card title="Avg daily intake vs. daily value"}
+Protein and fiber are goals (aim for 100% or more); sodium is a limit (stay at or under 100%). Daily values: protein 50 g, fiber 28 g, sodium 2,300 mg.
+
+```{ojs}
+Plot.plot({
+  width: 520,
+  height: 420,
+  marginLeft: 60,
+  marginRight: 40,
+  x: {label: "% of daily value", domain: [0, Math.max(150, d3.max(adequacy, d => d.pct) * 1.1)], grid: true},
+  y: {label: null, domain: nutrientRefs.map(d => d.nutrient)},
+  color: statusColor,
+  marks: [
+    Plot.barX(adequacy, {x: "pct", y: "nutrient", fill: "status"}),
+    Plot.text(adequacy, {x: "pct", y: "nutrient", text: d => Math.round(d.pct) + "%", dx: 4, textAnchor: "start", fontSize: 12}),
+    Plot.ruleX([100], {stroke: "#333", strokeDasharray: "4,3"}),
+    Plot.ruleX([0])
+  ]
+})
+```
+:::
+
+## Column
+
+::: {.card title="Days meeting the target"}
+Share of days that reached the goal (protein, fiber) or stayed within the limit (sodium).
+
+```{ojs}
+Plot.plot({
+  width: 520,
+  height: 420,
+  marginLeft: 60,
+  marginRight: 40,
+  x: {label: "% of days", domain: [0, 100], grid: true},
+  y: {label: null, domain: nutrientRefs.map(d => d.nutrient)},
+  marks: [
+    Plot.barX(adequacy, {x: "met", y: "nutrient", fill: "#4e79a7"}),
+    Plot.text(adequacy, {x: "met", y: "nutrient", text: d => Math.round(d.met) + "%", dx: 4, textAnchor: "start", fontSize: 12}),
     Plot.ruleX([0])
   ]
 })
