@@ -1,0 +1,5 @@
+altair
+vega_datasets
+pandas
+jupyter
+vl-convert-python

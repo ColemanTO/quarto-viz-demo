@@ -1,0 +1,86 @@
+---
+title: "Quarto + Altair + Observable"
+---
+
+## 1. Altair: brushing a scatter to filter bars
+
+```{python}
+import altair as alt
+from vega_datasets import data
+
+cars = data.cars()
+brush = alt.selection_interval()
+
+points = alt.Chart(cars).mark_point().encode(
+    x="Horsepower:Q",
+    y="Miles_per_Gallon:Q",
+    color=alt.condition(brush, "Origin:N", alt.value("lightgray")),
+).add_params(brush)
+
+bars = alt.Chart(cars).mark_bar().encode(
+    y="Origin:N",
+    x="count()",
+    color="Origin:N",
+).transform_filter(brush)
+
+points & bars
+```
+
+## 2. Vega-Lite spec as a dict
+
+```{python}
+spec = {
+    "data": {"url": "https://vega.github.io/vega-datasets/data/cars.json"},
+    "mark": "bar",
+    "encoding": {
+        "x": {"field": "Cylinders", "type": "ordinal"},
+        "y": {"aggregate": "mean", "field": "Horsepower"},
+    },
+}
+alt.Chart.from_dict(spec)
+```
+
+## 3. Observable Plot
+
+```{ojs}
+Plot = require("@observablehq/plot")
+penguins = FileAttachment("penguins.csv").csv({typed: true})
+```
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", fill: "species"})
+  ],
+  color: {legend: true}
+})
+```
+
+## 4. Python to D3
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame({"x": range(10), "y": [i**2 for i in range(10)]})
+ojs_define(data=df)
+```
+
+```{ojs}
+d3 = require("d3@7")
+rows = transpose(data)
+
+{
+  const svg = d3.create("svg").attr("viewBox", [0, 0, 400, 200]);
+  const x = d3.scaleLinear([0, 9], [30, 380]);
+  const y = d3.scaleLinear([0, 81], [180, 10]);
+
+  svg.append("path")
+    .datum(rows)
+    .attr("fill", "none")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 2)
+    .attr("d", d3.line().x(d => x(d.x)).y(d => y(d.y)));
+
+  return svg.node();
+}
+```
